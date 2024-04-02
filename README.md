@@ -10,7 +10,7 @@
 <!-- HEADER -->
 |  |  |
 |---|---|
-| <img src="https://www.ieseg.fr/wp-content/uploads/IESEG-Logo-2012-rgb.jpg" alt="drawing" width=100%/> | <span><br>Recommendation Systems<br>Module<br>Class: 2022 & 2023</span> |
+| <img src="https://www.ieseg.fr/wp-content/uploads/IESEG-Logo-2012-rgb.jpg" alt="drawing" width=100%/> | <span><br>Recommendation Systems<br>Module<br>Class: 2023 & 2024</span> |
 
 <!-- CONTENT -->
 

@@ -189,11 +189,16 @@ def ranking_metrics(prediction, threshold, excl_impossible=False):
     for user in df_pred["uid"].unique():
         # predicted values
         plist = list(df_pred.loc[df_pred["uid"]==user,:].sort_values("est", ascending=False)["iid"])
-        df_pred_sort[user] = [plist]
         
         # real values
         rlist = list(df_pred.loc[df_pred["uid"]==user,:].sort_values("r_ui", ascending=False)["iid"])
-        df_real_sort[user] = [rlist]
+
+        # plist and rlist should be longer than 0
+        if len(plist) == 0 or len(rlist) == 0: 
+            continue
+        else:
+            df_pred_sort[user] = [plist]
+            df_real_sort[user] = [rlist]
 
     df_pred_sort = pd.DataFrame(df_pred_sort, index=["iid"]).T
     df_real_sort = pd.DataFrame(df_real_sort, index=["iid"]).T
