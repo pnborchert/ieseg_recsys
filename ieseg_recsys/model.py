@@ -55,7 +55,7 @@ class ContentBased:
         missing_items = list(set(self.items) - set(df["item"]))
         if len(missing_items) > 0: 
             fix_df = pd.DataFrame([{"user":np.nan, "item":i, "rating":np.nan} for i in missing_items])
-            df = df.append(fix_df).reset_index(drop=True)
+            df = pd.concat([df, fix_df], axis=0).reset_index(drop=True) 
 
         # pivot 
         df_pivot = df.pivot_table(index='user', values='rating', columns='item', dropna=False).reindex(self.users)

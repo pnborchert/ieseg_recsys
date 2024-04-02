@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='ieseg_recsys',
-    version='0.24.0',
+    version='0.24.1',
     license='MIT',
     author="Philipp Borchert",
     author_email='p.borchert@ieseg.fr',
